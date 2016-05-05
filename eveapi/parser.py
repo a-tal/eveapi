@@ -20,8 +20,6 @@ else:
 def _castfunc(key, value):
     """Attempts to cast an XML string to the most probable type."""
 
-    print(key, value)
-
     try:
         if value.strip("-").isdigit():
             return int(value)
