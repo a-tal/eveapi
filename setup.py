@@ -39,10 +39,10 @@ class PyTest(TestCommand):
 
 
 def find_version(filename):
-    """Uses re to pull out the assigned value to __version__ in filename."""
+    """Uses re to pull out the assigned value to VERSION in filename."""
 
     with io.open(filename, 'r', encoding='utf-8') as version_file:
-        version_match = re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]',
+        version_match = re.search(r'^VERSION = [\'"]([^\'"]*)[\'"]',
                                   version_file.read(), re.M)
     if version_match:
         return version_match.group(1)
