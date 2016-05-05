@@ -48,10 +48,3 @@ def vcode(request):
 @pytest.fixture
 def authenticated_api(api, key_id, vcode):
     return api.auth(keyID=key_id, vCode=vcode)
-
-
-@pytest.fixture(scope="function", autouse=True)
-def accept_failure(request):
-    """Accept that we might get an auth denied."""
-
-    return request
