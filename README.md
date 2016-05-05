@@ -5,7 +5,9 @@ Python interface for EVE Online API.
 Installation
 ------------
 
-    pip install pip install git+https://github.com/a-tal/eveapi.git@forked
+```bash
+pip install git+https://github.com/a-tal/eveapi.git@forked
+```
 
 
 Example
@@ -18,7 +20,7 @@ api = eveapi.EVEAPIConnection()
 auth = api.auth(keyID=API_KEY_ID, vCode=API_VER_CODE)
 
 for character in auth.account.Characters():
-    print character.name
+    print(character.name)
 ```
 
 
